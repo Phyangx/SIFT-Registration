@@ -1,2 +1,2 @@
-# Image Registration and Alignment
-Image registration and alignment methods for Ground-based solar observations.
+# SIFT Registration
+Image registration algorithm for Ground-based solar observations with the scale invariant feature transform method.
