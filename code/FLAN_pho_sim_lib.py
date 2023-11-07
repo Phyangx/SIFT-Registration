@@ -3,7 +3,7 @@
 Created on Thu Jul 21 10:35:59 2022
 
 @author: Xu Yang
-pip install opencv-contrib-python==3.4.2.16
+#pip install opencv-contrib-python==3.4.2.16 ### New CV2 package now includes SIFT model. Users can install the newest CV2 package now.
 """
 
 import cv2
@@ -109,7 +109,8 @@ def siftImageAlignment(img1, img2, img3, Hsize, debug=0, mask1=None, mask2=None,
     def sift_kp(image, tt='Match_image', mask=None):
         if mask is not None:
             mask = np.uint8(mask * 255)
-        sift = cv2.xfeatures2d_SIFT.create()
+         sift = cv2.SIFT.create()  ### For SIFT feature tracking model in new CV2 package. by Xu Yang 2023.11.07.
+#        sift = cv2.xfeatures2d_SIFT.create() ###  
 #        sift = cv2.xfeatures2d_SURF.create(200)
 #        sift=cv2.ORB_create()
         kp, des = sift.detectAndCompute(image, mask)
